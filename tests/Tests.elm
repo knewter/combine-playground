@@ -3,7 +3,8 @@ module Tests exposing (..)
 import Test exposing (..)
 import Expect
 import Combine.Num exposing (int)
-import Combine exposing (parse, app, map)
+import Combine.Num exposing (int)
+import Combine exposing (parse, app, map, sequence, string, Parser)
 
 
 all : Test
@@ -18,4 +19,12 @@ all =
         , test "mapping the result of parsing integers" <|
             \() ->
                 Expect.equal (parse (map (\x -> x + 1) int) "123") ( Ok 124, { input = "", position = 3 } )
+        , test "parsing exact sequences successfully" <|
+            \() ->
+                Expect.equal (parse pickJosh "Josh") ( Ok [ "J", "o", "s", "h" ], { input = "", position = 4 } )
         ]
+
+
+pickJosh : Parser (List String)
+pickJosh =
+    sequence [ string "J", string "o", string "s", string "h" ]
