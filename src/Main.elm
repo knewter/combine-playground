@@ -75,8 +75,23 @@ init =
         gardenOfEden =
             "b3o2b2o3b$b2obobob3o$b3o2b5o$obobobobobo$4obobobob$4b3o4b$bobobob4o$obobobobobo$5o2b3ob$3obobob2ob$3b2o2b3o!"
 
+        frenchKiss =
+            "o9b$3o7b$3bo6b$2bo2b2o3b$2bo4bo2b$3b2o2bo2b$6bo3b$7b3o$9bo!"
+
+        gliderProducingSwitchEngine =
+            "bo65b$bo65b$bo65b$5bo61b$b3o2bo60b$o4bo61b$o3bo62b$b3o63b$15b2o50b$13b2o2bo49b$obo10b2o3bo48b$obo10b2o52b$obo64b$obo17bo46b$b2o14bo49b3$22bo2bo41b$26bo40b$22bo10b2o32b$26bo6b2o32b$22b4o41b$21bo45b$22b2o43b$23bo43b3$41b2o24b$41b2o24b3$13b2o52b$13b2o52b5$36b2o29b$36b3o9b2o17b$37bo10bobo16b$49bo17b$33bo33b$27bo5bo33b$26bobo11b3o24b$26bo2bo9bob2o24b$16b2o9b2o10b2o26b$15bo2bo48b$15b2ob2o47b$18bobo46b$20b2o45b$17bo3bo45b$17bo2bo44b2o$18b3o44b2o3$54bo12b$53bobo11b$40bo12b2o12b$39bobo25b$39b2o!"
+
+        aircraftCarrier =
+            "2o2b$o2bo$2b2o!"
+
+        airforce =
+            "7bo6b$6bobo5b$7bo6b2$5b5o4b$4bo5bob2o$3bob2o3bob2o$3bobo2bobo3b$2obo3b2obo3b$2obo5bo4b$4b5o5b2$6bo7b$5bobo6b$6bo!"
+
+        blinkerfuse_synth =
+            "obo36b$2o37b$bo37b3$3ob3ob3ob3ob3ob3ob3ob3ob3ob3o3$bo37b$2o37b$obo!"
+
         ( result, _ ) =
-            parse RLEParser.rleToWorld gardenOfEden
+            parse RLEParser.rleToWorld blinkerfuse_synth
 
         rleWorld =
             Result.withDefault [] result

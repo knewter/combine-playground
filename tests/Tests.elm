@@ -6,7 +6,7 @@ import Combine.Num exposing (int)
 import Combine exposing (parse, app, map, sequence, string, Parser, while, skip, sepBy, regex, andThen, choice, succeed, many, andMap)
 import Combine.Char exposing (char)
 import String
-import RleParser exposing (..)
+import RLEParser exposing (..)
 
 
 all : Test
